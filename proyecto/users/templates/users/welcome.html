@@ -1,0 +1,107 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <script>
+        /**
+         * Array con las imagenes y enlaces que se iran mostrando en la web
+         */
+        var imagenes = new Array(
+            ['https://cdn.imperial.edu/ivc/images/microsoft-office-365.jpg', 'http://127.0.0.1:8000/Programas'],
+            ['https://i.pinimg.com/originals/82/7d/33/827d33b59a9b9d84a8f37ce32e3f441a.jpg', 'http://127.0.0.1:8000/Programas'],
+            ['https://maslinux.es/wp-content/uploads/2018/03/Ubuntu-Wallpapers-2-1.png', 'http://127.0.0.1:8000/Programas'],
+            ['https://1.bp.blogspot.com/_nD_YgZuOadA/TUpkSmPl5fI/AAAAAAAABVw/crxGFpAT95k/s1600/CoD-BO-wallpaper.jpg', 'http://127.0.0.1:8000/Programas']
+        );
+        var contador = 0;
+
+        /**
+         * Funcion para cambiar la imagen y link
+         */
+        function rotarImagenes() {
+            // cambiamos la imagen y la url
+            contador++
+            document.getElementById("imagen").src = imagenes[contador % imagenes.length][0];
+            document.getElementById("link").href = imagenes[contador % imagenes.length][1];
+        }
+
+        /**
+         * Función que se ejecuta una vez cargada la página
+         */
+        onload = function () {
+            // Cargamos una imagen aleatoria
+            rotarImagenes();
+
+            // Indicamos que cada 5 segundos cambie la imagen
+            setInterval(rotarImagenes, 5000);
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>MediaDownloader</title>
+</head>
+<body style="background:url('https://thumbs.gfycat.com/WarmheartedCooperativeHoneybadger-size_restricted.gif')">
+
+
+    <style type="text/css">
+
+
+        #navegador ul {
+            background-color: #333333;
+            list-style-type: none;
+            text-align: justify;
+            width: 1315px;
+            height: 100px;
+        }
+
+        #navegador li {
+            background-color: #ffd800;
+            display: inline;
+            text-align: justify;
+            margin: 10px 10px 10px 10px;
+        }
+
+            #navegador li a {
+                padding: 20px 70px 20px 70px;
+                color: #666;
+                background-color: #eeeeee;
+                border: 4px solid #666;
+                text-decoration: none;
+            }
+
+                #navegador li a:hover {
+                    background-color: #ffffff;
+                    color: #666;
+                }
+    </style>
+
+    <div id="navegador">
+        <ul>
+            <li><a href="http://127.0.0.1:8000/Programas">Programas</a></li>
+            <li><a href="http://127.0.0.1:8000">inicio</a></li>
+            <li><a href="#">Mi nube</a></li>
+            <li><a href="/logout">Cerrar sesion</a></li>
+        </ul>
+    </div>
+    <h1 style="color:#eeeeee; text-align:center">Bienvendido a:  MEDIADOWNLOADER</h1>
+    <a> / </a>
+    <h4 >MEDIADOWNLOADER</h4>
+       <div align="center">
+        <a href="" id="link"><img src="" id="imagen" width="800" height="450"></a>
+    </div>
+    <h1 style="text-align:center;background-color:#aaaaaa">Contactanos</h1>
+    <div align="center">
+        <h35>
+
+            <a href="mailto:mikilopez730@gmail.com" style="text-decoration-color:#333333;color:#ffffff" _blank>Contactar por correo</a>
+        </h35>
+    </div>
+</body>
+
+
+
+
+
+
+</html>
